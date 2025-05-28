@@ -895,3 +895,113 @@ box-shadow: 3px 10px 41px -14px rgba(0,0,0,0.69);
     margin-top: 30px;
   }
 }
+/*Cursor*/
+/* Base cursor style */
+.cursor-dot {
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
+  border-radius: 50%;
+  transition: opacity 0.2s ease-in-out;
+  will-change: transform;
+  width: 12px;
+  height: 12px;
+  background-color: #29435b;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+}
+
+.cursor-outline {
+  pointer-events: none;
+  position: fixed;
+  z-index: 9998;
+  border-radius: 50%;
+  transition: opacity 0.2s ease-in-out;
+  will-change: transform;
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease-out;
+}
+
+/* Hide cursor when inactive */
+.cursor-dot.hidden,
+.cursor-outline.hidden {
+  opacity: 0;
+}
+
+/* State: Hovering over images */
+.cursor-dot.image {
+  opacity: 0;
+}
+
+.cursor-outline.image {
+  transform: translate(-50%, -50%) scale(1);
+  background-color: #FF6B6B;
+  border: none;
+  width: 100px;
+  height: 100px;
+}
+
+.cursor-outline.image .cursor-text {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* State: Hovering over links */
+.cursor-dot.link {
+  background-color: #3eca1d;
+  transform: translate(-50%, -50%) scale(2);
+  width: 15px;
+  height: 15px;
+}
+
+/* State: Hovering over buttons */
+.cursor-dot.button {
+  background-color: #14B8A6;
+  transform: translate(-50%, -50%) scale(2.5);
+  width: 10px;
+  height: 10px;
+}
+
+/* State: Hovering over text */
+.cursor-dot.text {
+  background-color: #6366F1;
+  transform: translate(-50%, -50%) scale(1.8);
+  width: 10px;
+  height: 10px;
+}
+
+/* Optional text within cursor */
+.cursor-text {
+  font-size: 10px;
+  color: #3B82F6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+/* Global style to hide default cursor when using custom cursor */
+body.custom-cursor,
+body.custom-cursor * {
+  cursor: none !important;
+}
+/* Responsive: Disable on small screens and touch devices */
+@media (max-width: 768px), (pointer: coarse) {
+  body.custom-cursor,
+  body.custom-cursor * {
+    cursor: auto !important;
+  }
+
+  .cursor-dot, .cursor-outline {
+    display: none;
+  }
+}
+/*Cursor*/
