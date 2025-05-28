@@ -4,13 +4,13 @@ html {
   scroll-behavior: smooth;
 }
 body{
-  font-family: 'Space Grotesk', sans-serif; !important;
+  font-family: 'Space Grotesk', sans-serif !important;
   color: #031926;
   font-size: 14px;
   cursor: none !important;
 }
 p{
-  font-family: 'Roboto', sans-serif; !important;
+  font-family: 'Roboto', sans-serif !important;
   font-size: 24px !important;
   line-height: 1.5 !important;
   color: #031926;
