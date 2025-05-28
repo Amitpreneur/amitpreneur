@@ -902,13 +902,13 @@ box-shadow: 3px 10px 41px -14px rgba(0,0,0,0.69);
   position: fixed;
   z-index: 9999;
   border-radius: 50%;
-  transition: opacity 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   will-change: transform;
   width: 12px;
   height: 12px;
   background-color: #29435b;
   transform: translate(-50%, -50%);
-  transition: transform 0.15s ease-out, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.15s ease-out, width 0.2s ease, height 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .cursor-outline {
@@ -975,6 +975,10 @@ box-shadow: 3px 10px 41px -14px rgba(0,0,0,0.69);
   transform: translate(-50%, -50%) scale(1.8);
   width: 10px;
   height: 10px;
+}
+
+.cursor-dot.inverted {
+  background-color: #ffffff;
 }
 
 /* Optional text within cursor */
