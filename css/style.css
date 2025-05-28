@@ -882,6 +882,7 @@ box-shadow: 3px 10px 41px -14px rgba(0,0,0,0.69);
   }
   p{
     font-size: clamp(16px, 3vw, 18px) !important;
+  
   }
 }
 
@@ -893,4 +894,4 @@ box-shadow: 3px 10px 41px -14px rgba(0,0,0,0.69);
   .mt-res3{
     margin-top: 30px;
   }
-  
+}
